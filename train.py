@@ -12,7 +12,6 @@ from pathlib import Path
 from torch import optim
 from torch.utils.data import DataLoader, random_split
 from tqdm import tqdm
-
 import wandb
 from evaluate import evaluate
 from unet import UNet
@@ -21,6 +20,8 @@ from utils.dice_score import dice_loss
 
 dir_img = Path('./data/imgs/')
 dir_mask = Path('./data/masks/')
+# 定义模型检查点保存的目录路径
+# 用于保存训练过程中的模型权重文件
 dir_checkpoint = Path('./checkpoints/')
 
 
